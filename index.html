@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Playground</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Main Container -->
+  <main class="p-4 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold text-center my-6">AI Playground</h1>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Audio Section -->
+      <section class="bg-white rounded-xl shadow p-4">
+        <h2 class="text-xl font-semibold mb-2">Upload Audio</h2>
+        <input type="file" accept="audio/*" id="audioUpload" class="mb-2">
+        <button id="processAudio" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Process</button>
+        <pre id="audioResult" class="mt-4 whitespace-pre-wrap text-sm"></pre>
+      </section>
+
+      <!-- Image Section -->
+      <section class="bg-white rounded-xl shadow p-4">
+        <h2 class="text-xl font-semibold mb-2">Upload Image</h2>
+        <input type="file" accept="image/*" id="imageUpload" class="mb-2">
+        <button id="processImage" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Analyze</button>
+        <pre id="imageResult" class="mt-4 whitespace-pre-wrap text-sm"></pre>
+      </section>
+
+      <!-- Text Section -->
+      <section class="bg-white rounded-xl shadow p-4 col-span-2">
+        <h2 class="text-xl font-semibold mb-2">Analyze Text</h2>
+        <textarea id="textInput" rows="4" class="w-full p-2 border rounded"></textarea>
+        <button id="processText" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Analyze</button>
+        <pre id="textResult" class="mt-4 whitespace-pre-wrap text-sm"></pre>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
